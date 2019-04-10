@@ -60,6 +60,15 @@ export default class AdminMatches extends Component {
                           {match.resultAway} <strong>-</strong>{" "}
                           {match.resultLocal}
                         </TableCell>
+                        <TableCell>
+                          {match.final === "Yes" ? (
+                            <span className="matches_tag_red">Final</span>
+                          ) : (
+                            <span className="matches_tag_green">
+                              Not Played yet
+                            </span>
+                          )}
+                        </TableCell>
                       </TableRow>
                     ))
                   : null}
