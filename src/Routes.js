@@ -1,11 +1,13 @@
 import React from "react";
 import Layout from "./hoc/Layout";
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import Home from "./components/home";
 import SignIn from "./components/sign_in";
 import Dashboard from "./components/admin/Dashboard";
 import AdminMatches from "./components/admin/matches";
 import AddEditMatch from "./components/admin/matches/AddEditMatch";
+import AdminPlayers from "./components/admin/players";
+import AddEditPlayer from "./components/admin/players/AddEditPlayer";
 
 import PrivateRoutes from "./components/authRoutes/PrivateRoutes";
 import PublicRoutes from "./components/authRoutes/PublicRoutes";
@@ -15,6 +17,24 @@ const Routes = props => {
     <div className="App">
       <Layout>
         <Switch>
+          <PrivateRoutes
+            {...props}
+            path="/admin_players/add_player/:id"
+            exact
+            component={AddEditPlayer}
+          />
+          <PrivateRoutes
+            {...props}
+            path="/admin_players/add_player"
+            exact
+            component={AddEditPlayer}
+          />
+          <PrivateRoutes
+            {...props}
+            path="/admin_players"
+            exact
+            component={AdminPlayers}
+          />
           <PrivateRoutes
             {...props}
             path="/admin_matches/edit_match"
