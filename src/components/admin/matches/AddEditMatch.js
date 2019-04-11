@@ -265,7 +265,7 @@ export default class AddEditMatch extends Component {
                         {this.state.formSuccess}
                      </div>
                      {this.state.formError ? (
-                        <div className='error_label'> Something is wrong</div>
+                        <div className='error_label'> Something went wrong</div>
                      ) : (
                         ''
                      )}
