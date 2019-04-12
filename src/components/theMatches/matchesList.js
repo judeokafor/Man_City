@@ -99,7 +99,7 @@ export default class MatchesList extends Component {
       </NodeGroup>
     ) : null;
   render() {
-    console.log(this.state.matchesList);
+    // console.log(this.state.matchesList);
     return <div>{this.showMatches()}</div>;
   }
 }

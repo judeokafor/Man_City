@@ -133,7 +133,15 @@ export default class TheMatches extends Component {
                 </div>
               </div>
             </div>
-            <MatchesList matches={state.filterMatches} />
+
+            {this.state.loading ? (
+              <CircularProgress
+                thickness={7}
+                style={{ color: "#98c5e9", margin: "10rem 15rem" }}
+              />
+            ) : (
+              <MatchesList matches={state.filterMatches} />
+            )}
           </div>
           <div className="right">
             <LeagueTable />

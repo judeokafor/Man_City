@@ -17,7 +17,7 @@ import PublicRoutes from "./components/authRoutes/PublicRoutes";
 const Routes = props => {
   return (
     <div className="App">
-      <Layout>
+      <Layout user={props.user}>
         <Switch>
           <PrivateRoutes
             {...props}
