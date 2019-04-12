@@ -357,6 +357,10 @@ footer .footer_discl {
     margin: 5px 0px;
 }
 
+.m-2 {
+    margin: 10px 5px;
+}
+
 .match_filters {
     display: flex;
     border-bottom: 1px solid #01285e;
