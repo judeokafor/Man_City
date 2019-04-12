@@ -7,10 +7,14 @@ import { firebaseLooper } from "../ui/misc";
 import { Promise } from "core-js";
 
 export default class TheTeam extends Component {
-  state = {
-    loading: true,
-    players: []
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true,
+      players: []
+    };
+  }
   componentDidMount() {
     firebasePlayers.once("value").then(snapshot => {
       const players = firebaseLooper(snapshot);

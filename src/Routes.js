@@ -9,6 +9,8 @@ import AddEditMatch from "./components/admin/matches/AddEditMatch";
 import AdminPlayers from "./components/admin/players";
 import AddEditPlayer from "./components/admin/players/AddEditPlayer";
 import TheTeam from "./components/theTeam";
+import TheMatches from "./components/theMatches";
+import NotFound from "./components/ui/not_found";
 
 import PrivateRoutes from "./components/authRoutes/PrivateRoutes";
 import PublicRoutes from "./components/authRoutes/PublicRoutes";
@@ -76,9 +78,22 @@ const Routes = props => {
           <PublicRoutes
             restricted={false}
             {...props}
+            path="/the_matches"
+            exact
+            component={TheMatches}
+          />
+          <PublicRoutes
+            restricted={false}
+            {...props}
             path="/"
             exact
             component={Home}
+          />
+          <PublicRoutes
+            restricted={false}
+            {...props}
+            exact
+            component={NotFound}
           />
 
           {/* <Route exact component={SignIn} path="/sign_in" />
